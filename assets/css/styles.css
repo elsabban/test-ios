@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body .main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+body .main-container #gameOption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.66);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  z-index: 5000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .main-container #gameOption h3 {
+  color: white;
+  font-size: 30px;
+}
+
+body .main-container #gameOption.remove {
+  top: -100%;
+  opacity: 0;
+}
+
+body .main-container #score {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  z-index: 6;
+}
+
+body .main-container .sides {
+  position: relative;
+  height: 100%;
+}
+
+body .main-container .sides > div {
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  background-color: green;
+}
+
+body .main-container .sides > div.left-side {
+  left: 0;
+}
+
+body .main-container .sides > div.right-side {
+  right: 0;
+}
+
+body .main-container .sides .market-path {
+  position: absolute;
+  background-color: #97ada1;
+  width: 70%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body .main-container .sides .market-path .products {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  top: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+body .main-container .sides .market-path .basket {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+@media (max-width: 575px) {
+  body .main-container .sides .market-path .basket {
+    height: 200px;
+  }
+}
+
+@-webkit-keyframes moveDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
